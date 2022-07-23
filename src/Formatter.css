@@ -1,0 +1,155 @@
+:root{
+    --height-output-div: 40em;
+    --width-output-div: 30em;
+    
+    --bgcolor-one: #232526;
+    --bgcolor-two:#414345;
+    --buttonDiv-width:20em;
+}
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.heading{
+    color: aliceblue;
+    text-shadow: 0 0 18px red;   
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: 'Cinzel', serif;
+}
+.Container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:linear-gradient(45deg,var(--bgcolor-one),var(--bgcolor-two))
+   
+}
+.inputContainer{
+    
+    border-radius: 30px;
+    
+
+
+}
+
+.outputContainer{
+    background: transparent;
+    border:1px solid rgb(160, 158, 158) ;
+    border-radius: 30px;
+   
+}
+
+.buttonsDiv{
+    background-color: rgba(26, 30, 30,0.2);
+    height: 30em;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+textarea{
+    outline: none;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 3em;
+    font-family: 'Source Code Pro', monospace;
+    resize: none;
+    font-size: 1em;
+}
+textarea:focus{
+    outline: none;
+}
+.inputText{
+    color: rgb(255,255,255);
+    
+}
+.outputAreaRight:empty:before{
+    content: attr(data-placeholder);
+
+}
+
+.outputAreaRight{
+    background: transparent;
+    color: rgb(255, 255, 255);
+    height: var(--height-output-div);
+    width: var(--width-output-div);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.outputAreaWrong{
+    color: rgb(255, 5, 5);
+    height: var(--height-output-div);
+    width: var(--width-output-div);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+button{
+    width: 13em;
+    height: 3.5em;
+    margin: 4em;
+    border-radius: 12px;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.formatButton{
+    background-color: greenyellow;
+    border: none;
+}
+.formatButton:hover{
+    background-color: greenyellow;
+    box-shadow: 0 0 10px rgb(128, 255, 0), 0 0 40px rgb(82, 205, 38), 0 0 60px rgb(105, 241, 0);
+}
+.deleteButton{
+    border:none;
+    color: red;
+}
+.deleteButton:hover{
+    background-color: rgb(211, 17, 17);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(235, 15, 15), 0 0 40px rgb(160, 48, 48), 0 0 60px rgb(167, 114, 114);
+}
+.sig{
+    position: fixed;
+    color: rgb(93, 92, 92);
+    left: 90vw;
+    bottom: 1vh;
+    font-family: 'Edu SA Beginner', cursive;
+}
+
+.fieldInfo{
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.lastDiv{
+   
+    width: 20em;
+    text-align: left;
+    padding: 0.5em 2em;
+}
+.divNone{
+    display: none;
+}
